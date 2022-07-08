@@ -1,6 +1,3 @@
-import argparse
-import cv2
-import glob
 import os
 import torch as th
 
