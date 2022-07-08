@@ -1,2 +1,4 @@
 /glide_model_cache
-/test
+/random_test
+/__pycache__
+/Real-ESRGAN/experiments/pretrained_models/*.pth
