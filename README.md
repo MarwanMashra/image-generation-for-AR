@@ -1,4 +1,5 @@
 # image generation for VR
+exploring AR application of image generation diffusion models.
 
 ## Demo 👀
 You can see the demo video made with Unity [here](https://drive.google.com/file/d/1XtvwgSRuWUR3Yji7uTcrG0LwWJJmIULr/view?usp=sharing)
