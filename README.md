@@ -64,5 +64,5 @@ However, if you wish to do the setup manually, here are the commands to run in y
 - [x] Try image inpainting with Latent diffusion
 - [x] Add bg removal to the pipeline
 - [ ] Create demo with Cinema4D
-- [ ] Yry image generation instead of image inpainting 
+- [ ] Try image generation instead of image inpainting 
 - [ ] Write a design doc
