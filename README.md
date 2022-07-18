@@ -57,12 +57,12 @@ However, if you wish to do the setup manually, here are the commands to run in y
 
 
 ## TODO
-- [x] implement glide inpainting
-- [x] add an upscaler to the pipeline
-- [x] try to do the image overlay with OpenCV-Python
-- [x] create demo with Unity
-- [x] try image inpainting with Latent diffusion
-- [x] add bg removal to the pipeline
-- [ ] create demo with Cinema4D
-- [ ] try image generation instead of image inpainting 
+- [x] Implement glide inpainting
+- [x] Add an upscaler to the pipeline
+- [x] Try to do the image overlay with OpenCV-Python
+- [x] Create demo with Unity
+- [x] Try image inpainting with Latent diffusion
+- [x] Add bg removal to the pipeline
+- [ ] Create demo with Cinema4D
+- [ ] Yry image generation instead of image inpainting 
 - [ ] Write a design doc
