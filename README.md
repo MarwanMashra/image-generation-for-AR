@@ -54,3 +54,9 @@ However, if you wish to do the setup manually, here are the commands to run in y
 * The submodule [glide-text2im](glide-text2im) provides a small and filtered version of the diffusion model glide presented by OpenAI.
 
 * The submodule [Real-ESRGAN](Real-ESRGAN) provides a GAN upscaler based on the original paper of [ESRGAN](https://arxiv.org/pdf/1809.00219.pdf) by Wang et al.
+
+
+## TODO
+- [x] #739
+- [ ] https://github.com/octo-org/octo-repo/issues/740
+- [ ] Add delight to the experience when all tasks are complete :tada:
