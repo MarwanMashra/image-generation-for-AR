@@ -37,7 +37,7 @@ However, if you wish to do the setup manually, here are the commands to run in y
 %cd ..
 ```
 
-## Usage 📝
+## Usage 📖
 
 * The [glide](glide.ipynb) [![][colab]][colab-glide] notebook uses a the glide model fine-tuned for image inpainting task, to generate an element in an image. Here is how it works :
     1) Put your image in the [input images](input_images) folder.
@@ -56,7 +56,7 @@ However, if you wish to do the setup manually, here are the commands to run in y
 * The submodule [Real-ESRGAN](Real-ESRGAN) provides a GAN upscaler based on the original paper of [ESRGAN](https://arxiv.org/pdf/1809.00219.pdf) by Wang et al.
 
 
-## TODO
+## TODO 📝
 - [x] Implement glide inpainting
 - [x] Add an upscaler to the pipeline
 - [x] Try to do the image overlay with OpenCV-Python
