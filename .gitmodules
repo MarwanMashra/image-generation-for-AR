@@ -4,15 +4,6 @@
 [submodule "Real-ESRGAN"]
 	path = Real-ESRGAN
 	url = https://github.com/xinntao/Real-ESRGAN.git
-[submodule "min-dalle"]
-	path = min-dalle
-	url = https://github.com/kuprel/min-dalle.git
 [submodule "rembg"]
 	path = rembg
-	url = https://github.com/danielgatis/rembg
-[submodule "backgroundremover"]
-	path = backgroundremover
-	url = https://github.com/nadermx/backgroundremover.git
-[submodule "imagen-pytorch"]
-	path = imagen-pytorch
-	url = https://github.com/lucidrains/imagen-pytorch.git
+	url = https://github.com/MarwanMashra/rembg
