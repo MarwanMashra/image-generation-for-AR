@@ -10,3 +10,9 @@
 [submodule "rembg"]
 	path = rembg
 	url = https://github.com/danielgatis/rembg.git
+[submodule "backgroundremover"]
+	path = backgroundremover
+	url = https://github.com/nadermx/backgroundremover.git
+[submodule "imagen-pytorch"]
+	path = imagen-pytorch
+	url = https://github.com/lucidrains/imagen-pytorch.git
