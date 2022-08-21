@@ -9,7 +9,7 @@
 	url = https://github.com/kuprel/min-dalle.git
 [submodule "rembg"]
 	path = rembg
-	url = https://github.com/danielgatis/rembg.git
+	url = https://github.com/danielgatis/rembg
 [submodule "backgroundremover"]
 	path = backgroundremover
 	url = https://github.com/nadermx/backgroundremover.git
