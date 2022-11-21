@@ -5,7 +5,8 @@ from basicsr.archs.rrdbnet_arch import RRDBNet
 
 from realesrgan import RealESRGANer
 from realesrgan.archs.srvgg_arch import SRVGGNetCompact
-
+import numpy as np
+from PIL import Image
 
 class Upscaler:
     """Inference demo for Real-ESRGAN.
@@ -23,20 +24,17 @@ class Upscaler:
             model_path=model_path,
             model=model)
 
-    def upscale(self, batch: th.Tensor, outscale=4) -> th.Tensor:
-        scaled = ((batch + 1)*127.5).round().clamp(0,255).to(th.uint8).cpu()
-        reshaped = scaled.permute(2, 0, 3, 1).reshape([batch.shape[2], -1, 3])
-        img = reshaped.numpy()
-
-        if len(img.shape) == 3 and img.shape[2] == 4:
+    def upscale(self, img: Image.Image, outscale=4) -> Image.Image:
+        img_array = np.array(img)
+        if len(img_array.shape) == 3 and img_array.shape[2] == 4:
             img_mode = 'RGBA'
         else:
             img_mode = None
         try:
-            output, _ = self.upsampler.enhance(img, outscale=outscale)
+            output, _ = self.upsampler.enhance(img_array, outscale=outscale)
         except RuntimeError as error:
             print('Error when upscaling!!!')
             print('Error', error)
             return None
         else:
-            return th.from_numpy(output)[None].permute(0, 3, 1, 2).float() / 127.5 - 1
+            return Image.fromarray(output)

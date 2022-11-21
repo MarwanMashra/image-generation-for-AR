@@ -1,0 +1,16 @@
+python optimizedSD/optimized_txt2img.py --prompt "hyperrealisticpip style image of a Tesla car reflection in rain"  --n_samples 1
+
+
+4k, detailed, high resolution, sharp
+
+python optimizedSD/optimized_txt2img.py --ddim_steps 100 --prompt "a shiba inu sitting on wooden floor, 4k, detailed, high resolution, sharp"  --n_samples 6
+
+
+for the model weights
+https://huggingface.co/runwayml/stable-diffusion-inpainting/resolve/main/sd-v1-5-inpainting.ckpt
+
+unet
+https://huggingface.co/runwayml/stable-diffusion-inpainting/resolve/main/unet/diffusion_pytorch_model.bin
+
+vae
+https://huggingface.co/runwayml/stable-diffusion-inpainting/resolve/main/vae/diffusion_pytorch_model.bin

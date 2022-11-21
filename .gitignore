@@ -2,3 +2,10 @@
 /random_test
 /__pycache__
 /Real-ESRGAN/experiments/pretrained_models/*.pth
+
+/sd-v1-5-inpainting/*.ckpt
+/sd-v1-5-inpainting/unet/*.bin
+/sd-v1-5-inpainting/vae/*.bin
+*.ckpt
+/input*
+/output*
