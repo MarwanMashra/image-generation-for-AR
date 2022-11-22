@@ -6,6 +6,10 @@
 /sd-v1-5-inpainting/*.ckpt
 /sd-v1-5-inpainting/unet/*.bin
 /sd-v1-5-inpainting/vae/*.bin
+/sd-v1-5-inpainting/text_encoder/*.bin
+/sd-v1-5-inpainting/safety_checker/*.bin
+
+
 *.ckpt
 /input*
 /output*
