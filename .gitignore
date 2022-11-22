@@ -5,6 +5,8 @@
 
 stable-diffusion-inpainting
 
+Tools/__pycache__
+extra   # contains extra files and notes for me
 *.ckpt
 /input*
 /output*

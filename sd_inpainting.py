@@ -1,3 +1,6 @@
+import warnings
+warnings.filterwarnings("ignore")
+
 import argparse, os, re, random
 import inspect
 from typing import List, Optional, Union
@@ -13,7 +16,7 @@ import gradio as gr
 from diffusers import StableDiffusionInpaintPipeline
 
 from rembg.rembg import remove
-from upscaler import Upscaler
+from Tools.upscaler import Upscaler
 
 upscaler = Upscaler()
 
@@ -25,22 +28,8 @@ parser.add_argument(
     "--prompt", 
     type=str, 
     nargs="?", 
-    help="the prompt to render",
+    help="the text prompt to render",
     required=True,
-)
-parser.add_argument(
-    "--output_dir", 
-    type=str, 
-    nargs="?", 
-    help="dir to write results to", 
-    default="./outputs"
-)
-parser.add_argument(
-    "--save_name", 
-    type=str, 
-    nargs="?", 
-    help="name under which generated image will be saved", 
-    default="0.png"
 )
 parser.add_argument(
     "--image", 
@@ -50,46 +39,54 @@ parser.add_argument(
     required=True,
 )
 parser.add_argument(
-    "--mask_size",
-    type=int,
-    help="the size of the mask",
-    required=True,
-)
-parser.add_argument(
     "--mask_x",
     type=int,
-    help="the x position of the mask",
+    help="the x of the center point of the mask",
     required=True,
 )
 parser.add_argument(
     "--mask_y",
     type=int,
-    help="the y position of the mask",
+    help="the y of the center point of the mask",
     required=True,
+)
+parser.add_argument(
+    "--mask_size",
+    type=int,
+    help="the size of the mask, in pixels",
+    required=True,
+)
+parser.add_argument(
+    "--output_dir", 
+    type=str, 
+    nargs="?", 
+    help="directory of the output image (will be created if doesn't exist)", 
+    default="./outputs"
+)
+parser.add_argument(
+    "--save_name", 
+    type=str, 
+    nargs="?", 
+    help="name of the output image (with .png or .jpg)", 
+    default="0.png"
 )
 parser.add_argument(
     "--H",
     type=int,
     default=512,
-    help="image height, in pixel space",
+    help="image height, in pixels",
 )
 parser.add_argument(
     "--W",
     type=int,
     default=512,
-    help="image width, in pixel space",
+    help="image width, in pixels",
 )
 parser.add_argument(
-    "--scale",
-    type=float,
-    default=7.5,
-    help="unconditional guidance scale: eps = eps(x, empty) + scale * (eps(x, cond) - eps(x, empty))",
-)
-parser.add_argument(
-    "--device",
+    "--model",
     type=str,
-    default="cuda",
-    help="specify GPU (cuda/cuda:0/cuda:1/...)",
+    help="path to the folder of stable-diffusion-inpainting",
+    default="./stable-diffusion-inpainting",
 )
 parser.add_argument(
     "--seed",
@@ -98,10 +95,16 @@ parser.add_argument(
     help="the seed (for reproducible sampling)",
 )
 parser.add_argument(
-    "--model",
+    "--device",
     type=str,
-    help="path to checkpoint of model",
-    default="./sd-v1-5-inpainting",
+    default="cuda",
+    help="specify GPU (cuda/cuda:0/cuda:1/...)",
+)
+parser.add_argument(
+    "--scale",
+    type=float,
+    default=7.5,
+    help="unconditional guidance scale",
 )
 
 def main():
