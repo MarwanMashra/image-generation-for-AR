@@ -29,7 +29,6 @@ To install all packages and dependencies, you can run the cells from the Jupyter
 
 # Download the pre-trained model for Real-ESRGAN
 !wget https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0 RealESRGAN_x4plus.pth -P Real-ESRGAN/experiments/pretrained_models
-
 ```
 ### Installation of stable diffusion inpainting :
 ```
