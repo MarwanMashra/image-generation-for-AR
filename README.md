@@ -8,7 +8,7 @@ You can see the demo video made with Unity [here](https://drive.google.com/file/
 
 To clone this repo with all submodules, you can run in your terminal
 ```
-git clone --recurse-submodules -j8 https://github.com/MarwanMashra/image-generation-for-VR.git 
+git clone --recurse-submodules -j8 https://github.com/MarwanMashra/image-generation-for-AR.git 
 ```
 
 ✅ Each notebook contains a setup section to install all dependencies and prepare the environment. You only need to run it the first time. <b>No additional setup is needed</b>.
